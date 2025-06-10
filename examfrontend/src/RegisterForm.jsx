@@ -1,20 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {
-  Grid, Box, Typography, TextField, Button, Paper,
-  Avatar, Checkbox, FormControlLabel, Link, CssBaseline,
-  ThemeProvider, createTheme, LinearProgress
-} from '@mui/material';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { useNavigate } from 'react-router-dom';
-
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    background: { default: '#0d1117', paper: '#161b22' },
-    primary: { main: '#1976d2' }
-  }
-});
+import './RegisterForm.css'; // Import du fichier CSS
 
 export default function RegisterForm() {
   const navigate = useNavigate();
@@ -24,23 +11,30 @@ export default function RegisterForm() {
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [name, setName] = useState('');
+
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (message) setMessage('');
+      if (error) setError('');
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [message, error]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     try {
       const response = await axios.post('http://localhost:5181/api/auth/register', {
-        email, password, role
+        name,email, password, role
       });
       setMessage(response.data.message);
       setError('');
-      setTimeout(() => {
-        navigate('/login');
-      }, 1500);
+      setTimeout(() => navigate('/login'), 1500);
     } catch (err) {
-      setError(
-        err.response?.data || "Erreur d'inscription ❌"
-      );
+      setError(err.response?.data || "Erreur d'inscription ❌");
       setMessage('');
     } finally {
       setLoading(false);
@@ -48,157 +42,83 @@ export default function RegisterForm() {
   };
 
   return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-
-      {/* Messages de statut */}
+    <div className="container">
       {message && (
-        <Box sx={{ position: 'fixed', top: 10, left: 0, right: 0, textAlign: 'center', zIndex: 9999 }}>
-          <Paper elevation={3} sx={{ display: 'inline-block', px: 4, py: 2, bgcolor: 'success.main', color: '#fff' }}>
-            <Typography>{message}</Typography>
-            <LinearProgress color="success" sx={{ mt: 1 }} />
-          </Paper>
-        </Box>
+        <div className="alert success">
+          <p>{message}</p>
+          <div className="bar success-bar"></div>
+        </div>
       )}
       {error && (
-        <Box sx={{ position: 'fixed', top: 10, left: 0, right: 0, textAlign: 'center', zIndex: 9999 }}>
-          <Paper elevation={3} sx={{ display: 'inline-block', px: 4, py: 2, bgcolor: 'error.main', color: '#fff' }}>
-            <Typography>{error}</Typography>
-            <LinearProgress color="error" sx={{ mt: 1 }} />
-          </Paper>
-        </Box>
+        <div className="alert error">
+          <p>{error}</p>
+          <div className="bar error-bar"></div>
+        </div>
       )}
 
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' },
-          minHeight: '100vh',
-          width: '100%'
-        }}
-      >
-        {/* Bloc gauche : descriptif produit (en haut sur mobile) */}
-        <Box
-          sx={{
-            flex: 1,
-            bgcolor: '#0d1117',
-            color: '#c9d1d9',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            p: 6,
-            order: { xs: 1, md: 1 } // Toujours en premier
-          }}
-        >
-          <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold', color: '#58a6ff' }}>
-            ⚡ Sitemark
-          </Typography>
-          <Box mb={4}>
-            <Typography variant="h6">🛠️ Adaptable performance</Typography>
-            <Typography>Boost efficiency by adapting to your needs.</Typography>
-          </Box>
-          <Box mb={4}>
-            <Typography variant="h6">🧱 Built to last</Typography>
-            <Typography>Durability and reliability that endures.</Typography>
-          </Box>
-          <Box mb={4}>
-            <Typography variant="h6">👍 Great UX</Typography>
-            <Typography>Seamless integration with intuitive interfaces.</Typography>
-          </Box>
-          <Box>
-            <Typography variant="h6">🚀 Innovation</Typography>
-            <Typography>Features that exceed expectations.</Typography>
-          </Box>
-        </Box>
+      <div className="register-container">
+        <div className="left">
+          <h1>⚡ ExamQCM Platform</h1>
+          <div className="feature">
+            <h3>📝 Création d'examens simplifiée</h3>
+            <p>Les enseignants peuvent créer facilement des QCM avec différents types de questions.</p>
+          </div>
+          <div className="feature">
+            <h3>⏱️ Examens chronométrés</h3>
+            <p>Configuration flexible du temps alloué pour chaque examen.</p>
+          </div>
+          <div className="feature">
+            <h3>✅ Correction automatique</h3>
+            <p>Résultats instantanés avec correction automatique et calcul des notes.</p>
+          </div>
+          <div className="feature">
+            <h3>📊 Suivi des performances</h3>
+            <p>Historique complet des examens passés avec statistiques détaillées.</p>
+          </div>
+        </div>
 
-        {/* Bloc droit : formulaire (en bas sur mobile) */}
-        <Box
-          component={Paper}
-          elevation={6}
-          sx={{
-            flex: 1,
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            p: 4,
-            order: { xs: 2, md: 2 }, // En second sur mobile
-            minHeight: { xs: 'auto', md: '100vh' }
-          }}
-        >
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              maxWidth: 400,
-              mx: 'auto',
-              width: '100%'
-            }}
-          >
-            <Typography component="h1" variant="h5">Inscription</Typography>
-
-            <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1, width: '100%' }}>
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                label="Adresse Email"
-                autoComplete="email"
-                autoFocus
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                label="Mot de passe"
-                type="password"
-                autoComplete="current-password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                select
-                label="Rôle"
-                value={role}
-                onChange={(e) => setRole(e.target.value)}
-                SelectProps={{ native: true }}
-              >
-                <option value="Student">Étudiant</option>
-                <option value="Professor">Professeur</option>
-              </TextField>
-
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Se souvenir de moi"
-              />
-
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                sx={{ mt: 3, mb: 2 }}
-                disabled={loading}
-              >
-                {loading ? 'Chargement...' : "S'inscrire"}
-              </Button>
-
-              <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">Mot de passe oublié ?</Link>
-                </Grid>
-                <Grid item>
-                  <Link href="/login" variant="body2">Déjà inscrit ? Connexion</Link>
-                </Grid>
-              </Grid>
-            </Box>
-          </Box>
-        </Box>
-      </Box>
-    </ThemeProvider>
+        <div className="right">
+          <form onSubmit={handleSubmit}>
+            <h2>Inscription</h2>
+            <input
+              type="text"
+              placeholder="Nom complet"
+              value={name}
+              required
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              type="email"
+              placeholder="Adresse Email"
+              value={email}
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Mot de passe"
+              value={password}
+              required
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <select value={role} onChange={(e) => setRole(e.target.value)} required>
+              <option value="Student">Étudiant</option>
+              <option value="Professor">Professeur</option>
+            </select>
+            <div className="checkbox">
+              <input type="checkbox" id="remember" />
+              <label htmlFor="remember">Se souvenir de moi</label>
+            </div>
+            <button type="submit" disabled={loading}>
+              {loading ? 'Chargement...' : "S'inscrire"}
+            </button>
+            <div className="footer-links">
+              <a href="#">Mot de passe oublié ?</a>
+              <a href="/login">Déjà inscrit ? Connexion</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   );
 }

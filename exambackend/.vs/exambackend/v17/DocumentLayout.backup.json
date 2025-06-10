@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,20 +19,16 @@
       "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,50 +38,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\appsettings.json",
+              "RelativeDocumentMoniker": "exambackend\\appsettings.json",
+              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\appsettings.json",
+              "RelativeToolTip": "exambackend\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAByAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-08T23:07:54.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Program.cs",
               "RelativeDocumentMoniker": "exambackend\\Program.cs",
               "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Program.cs",
               "RelativeToolTip": "exambackend\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAwwA4AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-08T11:56:18.707Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\appsettings.json",
-              "RelativeDocumentMoniker": "exambackend\\appsettings.json",
-              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\appsettings.json",
-              "RelativeToolTip": "exambackend\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-08T11:55:50.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "exambackend\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\AuthController.cs",
               "RelativeToolTip": "exambackend\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAuwCoAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwB0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-08T11:53:08.167Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "exambackend\\Data\\AppDbContext.cs",
@@ -89,44 +89,43 @@
               "RelativeToolTip": "exambackend\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T11:46:14.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T11:46:14.384Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\RegisterDto.cs",
               "RelativeDocumentMoniker": "exambackend\\Models\\RegisterDto.cs",
               "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\RegisterDto.cs",
               "RelativeToolTip": "exambackend\\Models\\RegisterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-08T11:45:21.312Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\LoginDto.cs",
               "RelativeDocumentMoniker": "exambackend\\Models\\LoginDto.cs",
               "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\LoginDto.cs",
               "RelativeToolTip": "exambackend\\Models\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-08T11:44:50.482Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\User.cs",
               "RelativeDocumentMoniker": "exambackend\\Models\\User.cs",
               "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\User.cs",
               "RelativeToolTip": "exambackend\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-08T11:44:03.285Z",
               "EditorCaption": ""

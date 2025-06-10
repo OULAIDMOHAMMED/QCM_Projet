@@ -171,3 +171,4 @@ C:\Users\OULAID\Desktop\exam_projet\exambackend\exambackend\obj\Debug\net8.0\ref
 C:\Users\OULAID\Desktop\exam_projet\exambackend\exambackend\obj\Debug\net8.0\exambackend.pdb
 C:\Users\OULAID\Desktop\exam_projet\exambackend\exambackend\obj\Debug\net8.0\exambackend.genruntimeconfig.cache
 C:\Users\OULAID\Desktop\exam_projet\exambackend\exambackend\obj\Debug\net8.0\ref\exambackend.dll
+C:\Users\OULAID\Desktop\exam_projet\exambackend\exambackend\obj\Debug\net8.0\exambackend.sourcelink.json

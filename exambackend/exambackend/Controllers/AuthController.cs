@@ -29,6 +29,7 @@ namespace exambackend.Controllers
 
                 var user = new User
                 {
+                    name = dto.name?.Trim(),
                     Email = dto.Email.Trim(),
                     PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password),
                     Role = string.IsNullOrWhiteSpace(dto.Role) ? "Student" : dto.Role.Trim()
@@ -47,6 +48,20 @@ namespace exambackend.Controllers
             {
                 return StatusCode(500, $"Erreur serveur: {ex.Message}");
             }
+        }
+        [HttpGet("users")]
+        public async Task<IActionResult> GetAllUsers()
+        {
+            var users = await _context.Users
+                .Select(u => new {
+                    u.Id,
+                    u.name,
+                    u.Email,
+                    u.Role
+                })
+                .ToListAsync();
+
+            return Ok(users);
         }
 
         [HttpPost("login")]

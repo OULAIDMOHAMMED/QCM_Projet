@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .alert {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 9999;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .alert.success {
+    background-color: #2e7d32;
+    color: white;
+  }
+  
+  .alert.error {
+    background-color: #d32f2f;
+    color: white;
+  }
+  
+  .bar {
+    height: 4px;
+    margin-top: 5px;
+    animation: progress 3s linear forwards;
+  }
+  
+  .success-bar {
+    background-color: #81c784;
+  }
+  
+  .error-bar {
+    background-color: #ef5350;
+  }
+  
+  @keyframes progress {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  .register-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  @media(min-width: 768px) {
+    .register-container {
+      flex-direction: row;
+    }
+  }
+  
+  .left {
+    flex: 1;
+    padding: 0px 20px 0px 20px;
+    background-color: #161b22;
+    border-radius: 8px;
+    color: #c9d1d9;
+  }
+  
+  .left h1 {
+    color: #58a6ff;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .feature {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #0d1117;
+    border-radius: 6px;
+    transition: transform 0.2s;
+  }
+  
+  .feature:hover {
+    transform: translateY(-3px);
+  }
+  
+  .feature h3 {
+    color: #58a6ff;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .feature p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .right {
+    flex: 1;
+    background-color: #161b22;
+    padding: 30px;
+    border-radius: 8px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  input, select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  select {
+    background-color: #fff;
+  }
+  
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    padding: 12px;
+    background-color: #1976d2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #555;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: #58a6ff;
+    text-decoration: none;
+  }
