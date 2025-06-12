@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import './RegisterForm.css'; // Import du fichier CSS
+import './RegisterForm.css';
 
 export default function RegisterForm() {
   const navigate = useNavigate();
@@ -34,7 +34,7 @@ export default function RegisterForm() {
       setError('');
       setTimeout(() => navigate('/login'), 1500);
     } catch (err) {
-      setError(err.response?.data || "Erreur d'inscription ❌");
+      setError(err.response?.data || "Erreur d'inscription");
       setMessage('');
     } finally {
       setLoading(false);

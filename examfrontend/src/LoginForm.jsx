@@ -53,7 +53,7 @@ export default function LoginForm() {
         }
       }, 1500);
     } catch (err) {
-      setError(err.response?.data || "Erreur de connexion ❌");
+      setError(err.response?.data || "Erreur de connexion");
       setMessage('');
     } finally {
       setLoading(false);
