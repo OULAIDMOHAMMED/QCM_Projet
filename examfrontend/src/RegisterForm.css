@@ -166,3 +166,93 @@
     color: #58a6ff;
     text-decoration: none;
   }
+
+  input, select {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2);
+  }
+  
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23c9d1d9' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 40px;
+  }
+  
+  form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .checkbox input {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    accent-color: #58a6ff;
+  }
+  
+  .checkbox label {
+    font-size: 0.9rem;
+    color: #8b949e;
+    cursor: pointer;
+  }
+  
+  button {
+    padding: 14px;
+    background-color: #1f6feb;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2a7aee;
+  }
+  
+  button:disabled {
+    background-color: #484f58;
+    cursor: not-allowed;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: #58a6ff;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+    color: #79b8ff;
+  }
+  
