@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\controllers\\qcmcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\qcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\qcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\qcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\qcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -64,14 +64,14 @@
               "RelativeDocumentMoniker": "exambackend\\Controllers\\QCMController.cs",
               "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\QCMController.cs",
               "RelativeToolTip": "exambackend\\Controllers\\QCMController.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAowHMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAIwI8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T12:48:10.205Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "exambackend\\Controllers\\AuthController.cs",
@@ -79,8 +79,7 @@
               "RelativeToolTip": "exambackend\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAGUAAAAAAAAAAAAcwHMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T11:53:08.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T11:53:08.167Z"
             },
             {
               "$type": "Document",
@@ -92,25 +91,24 @@
               "RelativeToolTip": "exambackend\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAmwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T11:46:14.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T11:46:14.384Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "QCM.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\QCM.cs",
               "RelativeDocumentMoniker": "exambackend\\Models\\QCM.cs",
               "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\QCM.cs",
               "RelativeToolTip": "exambackend\\Models\\QCM.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA8wBEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA6wBEAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T12:38:59.074Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Program.cs",
               "RelativeDocumentMoniker": "exambackend\\Program.cs",
@@ -118,8 +116,7 @@
               "RelativeToolTip": "exambackend\\Program.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAcwBQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T11:56:18.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T11:56:18.707Z"
             },
             {
               "$type": "Document",
@@ -131,12 +128,11 @@
               "RelativeToolTip": "exambackend\\Models\\User.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAUwAcAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T11:44:03.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T11:44:03.285Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Question.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\Question.cs",
               "RelativeDocumentMoniker": "exambackend\\Models\\Question.cs",
@@ -144,8 +140,7 @@
               "RelativeToolTip": "exambackend\\Models\\Question.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAmwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T12:45:05.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-13T12:45:05.818Z"
             },
             {
               "$type": "Document",
@@ -157,8 +152,7 @@
               "RelativeToolTip": "exambackend\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAByAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-08T23:07:54.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T23:07:54.19Z"
             },
             {
               "$type": "Document",

@@ -112,5 +112,35 @@ namespace exambackend.Controllers
 
             return Ok(qcms);
         }
+        [HttpGet("all")]
+        [Authorize(Roles = "Professor")]
+        public async Task<ActionResult<IEnumerable<object>>> GetAllQCMs()
+        {
+            try
+            {
+                var qcms = await _context.QCMs
+                    .Include(q => q.Questions)
+                    .Select(q => new
+                    {
+                        q.Id,
+                        q.Title,
+                        TeacherId = q.TeacherId,
+                        QuestionsCount = q.Questions.Count,
+                        CreationDate = q.CreationDate // Assurez-vous d'avoir ce champ dans votre modèle
+                    })
+                    .OrderByDescending(q => q.CreationDate)
+                    .ToListAsync();
+
+                return Ok(qcms);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    Message = "Erreur lors de la récupération des QCMs",
+                    Detail = ex.Message
+                });
+            }
+        }
     }
 }

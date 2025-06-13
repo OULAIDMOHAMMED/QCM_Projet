@@ -13,5 +13,8 @@ public class QCM
     public int TeacherId { get; set; } // Référence au professeur
 
     public List<Question> Questions { get; set; } = new List<Question>(); // Liste des questions
+
+    public DateTime CreationDate { get; set; } = DateTime.UtcNow;
+    public DateTime LastModified { get; set; } = DateTime.UtcNow;
 }
 
