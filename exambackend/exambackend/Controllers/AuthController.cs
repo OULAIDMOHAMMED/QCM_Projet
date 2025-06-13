@@ -1,7 +1,10 @@
 ﻿using exambackend.Data;
 using exambackend.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace exambackend.Controllers
 {
@@ -71,7 +74,41 @@ namespace exambackend.Controllers
             if (user == null || !BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash))
                 return Unauthorized("Identifiants invalides.");
 
-            return Ok(new { message = "Connexion réussie", role = user.Role });
+            var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+        new Claim(ClaimTypes.Name, user.name),
+        new Claim(ClaimTypes.Email, user.Email),
+        new Claim(ClaimTypes.Role, user.Role)
+    };
+
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+            var authProperties = new AuthenticationProperties
+            {
+                IsPersistent = false, // Ne pas garder après fermeture du navigateur
+                ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(2), // Expiration absolue
+                AllowRefresh = false // Empêche le rafraîchissement du cookie
+            };
+
+            await HttpContext.SignInAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme,
+                new ClaimsPrincipal(claimsIdentity),
+                authProperties);
+
+            return Ok(new
+            {
+                message = "Connexion réussie",
+                role = user.Role,
+                expires = authProperties.ExpiresUtc?.ToString("o") // Date d'expiration ISO
+            });
+        }
+
+        [HttpPost("logout")]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return Ok(new { message = "Déconnexion réussie" });
         }
     }
 

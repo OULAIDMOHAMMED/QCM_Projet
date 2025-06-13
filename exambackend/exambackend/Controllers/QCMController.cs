@@ -1,47 +1,116 @@
-﻿namespace exambackend.Controllers;
-
-using exambackend.Data;
+﻿using exambackend.Data;
 using exambackend.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
+using System.Security.Claims;
 
-[Route("api/[controller]")]
-[ApiController]
-public class QCMController : ControllerBase
+namespace exambackend.Controllers
 {
-    private readonly AppDbContext _context;
-
-    public QCMController(AppDbContext context)
+    [Route("api/qcm")]
+    [ApiController]
+    [Authorize] // Protection globale du contrôleur
+    public class QCMController : ControllerBase
     {
-        _context = context;
-    }
+        private readonly AppDbContext _context;
 
-    // Endpoint pour créer un QCM
-    [HttpPost("create")]
-    public async Task<ActionResult<QCM>> CreateQCM([FromBody] QCM qcm)
-    {
-        // Vérifiez que l'utilisateur est authentifié et a le rôle "Teacher"
-        var userId = GetUserIdFromClaims(); // Méthode pour obtenir l'ID de l'utilisateur connecté
-        var user = await _context.Users.FindAsync(userId);
-
-        if (user == null || user.Role != "Teacher")
+        public QCMController(AppDbContext context)
         {
-            return Unauthorized("Accès refusé. Vous devez être un enseignant pour créer un QCM.");
+            _context = context;
         }
 
-        qcm.TeacherId = user.Id; // Associer le QCM à l'enseignant
-        _context.QCMs.Add(qcm);
-        await _context.SaveChangesAsync();
+        [HttpPost("create")]
+        public async Task<ActionResult<QCM>> CreateQCM([FromBody] QCM qcm)
+        {
+            // Vérification plus robuste de l'authentification
+            if (User.Identity?.IsAuthenticated != true)
+            {
+                return Unauthorized(new { Message = "Authentification requise" });
+            }
 
-        return CreatedAtAction(nameof(CreateQCM), new { id = qcm.Id }, qcm);
-    }
+            // Gestion sécurisée de l'ID utilisateur
+            if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out int userId) || userId <= 0)
+            {
+                return BadRequest(new { Message = "Identifiant utilisateur invalide" });
+            }
 
-    // Méthode pour obtenir l'ID de l'utilisateur à partir des revendications (claims)
-    private int GetUserIdFromClaims()
-    {
-        // Remplacez ceci par votre méthode d'extraction de l'ID de l'utilisateur à partir des revendications
-        return int.Parse(User.FindFirst("Id")?.Value);
+            // Récupération de l'utilisateur avec vérification
+            var user = await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Id == userId);
+            if (user == null)
+            {
+                return NotFound(new { Message = "Utilisateur non trouvé" });
+            }
+
+            // Vérification du rôle
+            if (user.Role != "Professor")
+            {
+                return StatusCode(403, new { Message = "Seuls les enseignants peuvent créer des QCM" });
+            }
+
+            // Validation du QCM
+            if (qcm == null || string.IsNullOrWhiteSpace(qcm.Title))
+            {
+                return BadRequest(new { Message = "Les données du QCM sont invalides" });
+            }
+
+            // Création sécurisée du QCM
+            var newQcm = new QCM
+            {
+                Title = qcm.Title,
+                TeacherId = userId,
+                Questions = qcm.Questions ?? new List<Question>()
+            };
+
+            try
+            {
+                _context.QCMs.Add(newQcm);
+                await _context.SaveChangesAsync();
+
+                return CreatedAtAction(
+                    actionName: nameof(GetQcmById),
+                    routeValues: new { id = newQcm.Id },
+                    value: new
+                    {
+                        Id = newQcm.Id,
+                        Title = newQcm.Title,
+                        TeacherId = newQcm.TeacherId
+                    });
+            }
+            catch (DbUpdateException ex)
+            {
+                return StatusCode(500, new { Message = "Erreur lors de la sauvegarde du QCM", Detail = ex.InnerException?.Message });
+            }
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<QCM>> GetQcmById(int id)
+        {
+            var qcm = await _context.QCMs
+                .Include(q => q.Questions)
+                .FirstOrDefaultAsync(q => q.Id == id);
+
+            if (qcm == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(qcm);
+        }
+
+        [HttpGet("teacher")]
+        public async Task<ActionResult<IEnumerable<QCM>>> GetTeacherQcms()
+        {
+            if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out int userId))
+            {
+                return BadRequest(new { Message = "Identifiant utilisateur invalide" });
+            }
+
+            var qcms = await _context.QCMs
+                .Where(q => q.TeacherId == userId)
+                .Include(q => q.Questions)
+                .ToListAsync();
+
+            return Ok(qcms);
+        }
     }
 }
-

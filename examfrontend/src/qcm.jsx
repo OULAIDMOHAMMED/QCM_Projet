@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+
+// Configure axios une fois au niveau de l'application (à mettre dans index.js)
+axios.defaults.withCredentials = true;
 
 export default function CreateQCM() {
   const [title, setTitle] = useState('');
   const [questions, setQuestions] = useState([
-    { question: '', answers: ['', '', '', ''], correctIndexes: [] } // correctIndexes est un tableau
+    { question: '', answers: ['', '', '', ''], correctIndexes: [] }
   ]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
 
   const handleQuestionChange = (index, value) => {
     const newQuestions = [...questions];
@@ -18,15 +25,12 @@ export default function CreateQCM() {
     setQuestions(newQuestions);
   };
 
-  // Gère la sélection/désélection d'une réponse correcte
   const handleCorrectChange = (qIndex, aIndex) => {
     const newQuestions = [...questions];
     const corrects = newQuestions[qIndex].correctIndexes;
     if (corrects.includes(aIndex)) {
-      // Désélectionner si déjà présent
       newQuestions[qIndex].correctIndexes = corrects.filter(i => i !== aIndex);
     } else {
-      // Ajouter à la sélection
       newQuestions[qIndex].correctIndexes = [...corrects, aIndex];
     }
     setQuestions(newQuestions);
@@ -36,18 +40,111 @@ export default function CreateQCM() {
     setQuestions([...questions, { question: '', answers: ['', '', '', ''], correctIndexes: [] }]);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Ici, envoyer le QCM au backend ou le stocker
-    console.log({ title, questions });
-    alert("QCM créé avec succès !");
-    setTitle('');
-    setQuestions([{ question: '', answers: ['', '', '', ''], correctIndexes: [] }]);
+    setError(null);
+    setSuccess(null);
+    setIsSubmitting(true);
+
+    try {
+      // Validation des données
+      if (!title.trim()) {
+        throw new Error('Le titre du QCM est requis');
+      }
+
+      const hasValidQuestions = questions.some(
+        q => q.question.trim() && q.answers.some(a => a.trim())
+      );
+      
+      if (!hasValidQuestions) {
+        throw new Error('Ajoutez au moins une question valide');
+      }
+
+      // Préparation des données
+      const qcmData = {
+        Title: title,
+        Questions: questions
+          .filter(q => q.question.trim())
+          .map(q => ({
+            QuestionText: q.question,
+            Answers: q.answers.filter(a => a.trim()),
+            CorrectIndexes: q.correctIndexes
+          }))
+      };
+
+      // Envoi au backend
+      const response = await axios.post(
+        'http://localhost:5181/api/qcm/create', 
+        qcmData,
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      );
+
+      // Réinitialisation après succès
+      setTitle('');
+      setQuestions([{ question: '', answers: ['', '', '', ''], correctIndexes: [] }]);
+      setSuccess(response.data.message || 'QCM créé avec succès!');
+      
+    } catch (error) {
+      let errorMessage = "Erreur lors de la création du QCM";
+      
+      if (error.response) {
+        // Erreur 4xx/5xx du serveur
+        errorMessage = error.response.data.message || errorMessage;
+      } else if (error.request) {
+        // Pas de réponse du serveur (Network Error)
+        errorMessage = "Impossible de se connecter au serveur. Vérifiez:";
+        errorMessage += "\n1. Que le backend est en cours d'exécution";
+        errorMessage += "\n2. Que l'URL est correcte (http://localhost:5181)";
+        errorMessage += "\n3. Votre connexion internet";
+      } else {
+        // Erreur de configuration
+        errorMessage = error.message || errorMessage;
+      }
+
+      setError(errorMessage);
+      console.error('Erreur détaillée:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className="container" style={{ padding: 20 }}>
       <h1 style={{ color: '#58a6ff', textAlign: 'center' }}>Créer un QCM</h1>
+      
+      {/* Message d'erreur */}
+      {error && (
+        <div style={{ 
+          color: '#ff6b6b',
+          backgroundColor: '#ffebee',
+          padding: 15,
+          borderRadius: 6,
+          marginBottom: 20,
+          border: '1px solid #ffcdd2',
+          whiteSpace: 'pre-line'
+        }}>
+          {error}
+        </div>
+      )}
+      
+      {/* Message de succès */}
+      {success && (
+        <div style={{ 
+          color: '#3fb950',
+          backgroundColor: '#ebfbee',
+          padding: 15,
+          borderRadius: 6,
+          marginBottom: 20,
+          border: '1px solid #b7eb8f'
+        }}>
+          {success}
+        </div>
+      )}
+
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -135,9 +232,18 @@ export default function CreateQCM() {
 
         <button
           type="submit"
-          style={{ padding: '14px', backgroundColor: '#1f6feb', color: 'white', fontSize: '1rem', borderRadius: 6, cursor: 'pointer' }}
+          disabled={isSubmitting}
+          style={{ 
+            padding: '14px', 
+            backgroundColor: isSubmitting ? '#1f6feb90' : '#1f6feb', 
+            color: 'white', 
+            fontSize: '1rem', 
+            borderRadius: 6, 
+            cursor: isSubmitting ? 'wait' : 'pointer',
+            opacity: isSubmitting ? 0.7 : 1
+          }}
         >
-          Enregistrer le QCM
+          {isSubmitting ? 'Envoi en cours...' : 'Enregistrer le QCM'}
         </button>
       </form>
     </div>

@@ -11,7 +11,6 @@ public class QCM
 
     [ForeignKey("User")]
     public int TeacherId { get; set; } // Référence au professeur
-    public User Teacher { get; set; } // Utilisateur qui a créé le QCM
 
     public List<Question> Questions { get; set; } = new List<Question>(); // Liste des questions
 }

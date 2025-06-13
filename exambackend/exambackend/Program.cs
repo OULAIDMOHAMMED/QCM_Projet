@@ -1,4 +1,5 @@
 ﻿using exambackend.Data;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,12 +18,27 @@ builder.Services.AddCors(options =>
         policy => policy
             .WithOrigins("http://localhost:5173")
             .AllowAnyMethod()
-            .AllowAnyHeader());
+            .AllowAnyHeader()
+            .AllowCredentials());
 });
 
-var app = builder.Build();
 
-// 4. Configuration du pipeline HTTP
+
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.Cookie.Name = "Auth.Cookie";
+        options.LoginPath = "/api/auth/login";
+        options.LogoutPath = "/api/auth/logout";
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(2); // Durée de vie du cookie
+        options.SlidingExpiration = false; // Pas de renouvellement automatique
+        options.Cookie.HttpOnly = true; // Protection contre XSS
+        options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // HTTPS seulement
+        options.Cookie.SameSite = SameSiteMode.Lax; // Protection CSRF
+    });
+
+var app = builder.Build();
 
 // Redirection HTTPS (important pour la production)
 app.UseHttpsRedirection();
@@ -30,6 +46,7 @@ app.UseHttpsRedirection();
 // Autorise les requêtes CORS depuis votre frontend
 app.UseCors("AllowReactApp");
 
+app.UseAuthentication();
 // Système d'autorisation
 app.UseAuthorization();
 

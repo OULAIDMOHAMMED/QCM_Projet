@@ -47,7 +47,7 @@ export default function LoginForm() {
       
       setTimeout(() => {
         if (response.data.role === 'Professor') {
-          navigate('/professor-dashboard');
+          navigate('/TeacherDashboard');
         } else {
           navigate('/student-dashboard');
         }
