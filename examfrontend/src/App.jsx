@@ -5,6 +5,7 @@ import RegisterForm from './RegisterForm';
 import LoginForm from './LoginForm';
 import CreateQCM from './qcm';
 import TeacherDashboard from './TeacherDashboard';
+import RespondQCM from './qcmetu';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/qcm" element={<CreateQCM />} />
         <Route path="/TeacherDashboard" element={<TeacherDashboard />} />
+        <Route path="/RS/:qcmId" element={<RespondQCM />} />
       </Routes>
     </BrowserRouter>
   );
