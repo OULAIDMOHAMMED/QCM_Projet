@@ -25,4 +25,5 @@ public class Response
             SelectedAnswersJson = JsonSerializer.Serialize(value);
         }
     }
+    public double Note { get; set; }
 }

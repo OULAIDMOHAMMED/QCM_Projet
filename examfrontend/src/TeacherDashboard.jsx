@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './TeacherDashboard.css';
 import CreateQCM from './qcm';
+import RegisteredStudents from './RegisteredStudents';
+
 
 export default function TeacherDashboard() {
   const [activeTab, setActiveTab] = useState('students');
@@ -42,8 +44,7 @@ export default function TeacherDashboard() {
       <main className="content">
         {activeTab === 'students' && (
           <section>
-            <h1>Étudiants inscrits</h1>
-            <p>Liste des étudiants inscrits...</p>
+            <RegisteredStudents />
             {/* Ici tu peux intégrer ta liste d'étudiants */}
           </section>
         )}

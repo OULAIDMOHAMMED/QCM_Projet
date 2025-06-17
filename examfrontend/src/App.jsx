@@ -7,6 +7,8 @@ import CreateQCM from './qcm';
 import TeacherDashboard from './TeacherDashboard';
 import RespondQCM from './qcmetu';
 import QCMList from './QCMList';
+import RegisteredStudents from './RegisteredStudents';
+
 
 export default function App() {
   return (
@@ -19,6 +21,7 @@ export default function App() {
         <Route path="/TeacherDashboard" element={<TeacherDashboard />} />
         <Route path="/RS/:qcmId" element={<RespondQCM />} />
         <Route path="/qcmm" element={<QCMList />} />
+        <Route path="/inscri" element={<RegisteredStudents />} />
       </Routes>
     </BrowserRouter>
   );
