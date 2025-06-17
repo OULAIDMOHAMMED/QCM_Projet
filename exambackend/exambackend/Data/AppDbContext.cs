@@ -9,6 +9,9 @@ namespace exambackend.Data
         public DbSet<QCM> QCMs { get; set; }
         public DbSet<Question> Questions { get; set; }
 
+        public DbSet<Response> Responses { get; set; } // Ajoutez cette ligne
+      
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
     }
 
