@@ -31,7 +31,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.Cookie.Name = "Auth.Cookie";
         options.LoginPath = "/api/auth/login";
         options.LogoutPath = "/api/auth/logout";
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(2); // Durée de vie du cookie
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(20); // Durée de vie du cookie
         options.SlidingExpiration = false; // Pas de renouvellement automatique
         options.Cookie.HttpOnly = true; // Protection contre XSS
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // HTTPS seulement

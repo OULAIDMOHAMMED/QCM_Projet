@@ -1,5 +1,6 @@
 ﻿public class ResponseDto
 {
-    public required int QCMId { get; set; }
-    public List<int> SelectedAnswers { get; set; } = new List<int>(); // Initialisation par défaut
+    public int QCMId { get; set; }
+    public string StudentId { get; set; }
+    public List<List<int>> SelectedAnswers { get; set; } = new List<List<int>>();
 }
