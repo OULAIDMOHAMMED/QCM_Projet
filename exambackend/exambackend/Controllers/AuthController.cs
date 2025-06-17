@@ -104,6 +104,20 @@ namespace exambackend.Controllers
                 expires = authProperties.ExpiresUtc?.ToString("o") // Date d'expiration ISO
             });
         }
+        [HttpGet("students")]
+        public async Task<IActionResult> GetAllStudents()
+        {
+            var students = await _context.Users
+                .Where(u => u.Role == "Student")
+                .Select(u => new {
+                    u.Id,
+                    u.name,
+                    u.Email
+                })
+                .ToListAsync();
+
+            return Ok(students);
+        }
 
         [HttpPost("logout")]
         public async Task<IActionResult> Logout()
