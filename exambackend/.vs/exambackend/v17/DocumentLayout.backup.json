@@ -62,9 +62,9 @@
               "Title": "QCMController.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\QCMController.cs",
               "RelativeDocumentMoniker": "exambackend\\Controllers\\QCMController.cs",
-              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\QCMController.cs*",
-              "RelativeToolTip": "exambackend\\Controllers\\QCMController.cs*",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAmwI8AAAAJAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\QCMController.cs",
+              "RelativeToolTip": "exambackend\\Controllers\\QCMController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAUwI8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T12:48:10.205Z",
               "EditorCaption": ""
@@ -99,12 +99,11 @@
               "Title": "QCM.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\QCM.cs",
               "RelativeDocumentMoniker": "exambackend\\Models\\QCM.cs",
-              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\QCM.cs*",
-              "RelativeToolTip": "exambackend\\Models\\QCM.cs*",
+              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\QCM.cs",
+              "RelativeToolTip": "exambackend\\Models\\QCM.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAA6wBEAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T12:38:59.074Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-13T12:38:59.074Z"
             },
             {
               "$type": "Document",
