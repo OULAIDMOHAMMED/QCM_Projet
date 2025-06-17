@@ -100,6 +100,7 @@ namespace exambackend.Controllers
             {
                 message = "Connexion réussie",
                 role = user.Role,
+                id = user.Id,
                 expires = authProperties.ExpiresUtc?.ToString("o") // Date d'expiration ISO
             });
         }

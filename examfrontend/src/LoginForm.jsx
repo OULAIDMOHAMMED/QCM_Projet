@@ -13,12 +13,14 @@ export default function LoginForm() {
   const [rememberMe, setRememberMe] = useState(false);
 
   useEffect(() => {
+    // Si email sauvegardé, le récupérer
     const savedEmail = localStorage.getItem('rememberedEmail');
     if (savedEmail) {
       setEmail(savedEmail);
       setRememberMe(true);
     }
 
+    // Timer pour effacer messages après 3 secondes
     const timer = setTimeout(() => {
       if (message) setMessage('');
       if (error) setError('');
@@ -30,21 +32,27 @@ export default function LoginForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    
-    try {
-      const response = await axios.post('http://localhost:5181/api/auth/login', {
-        email, password
-      });
+    setError('');
+    setMessage('');
 
+    try {
+      const response = await axios.post('http://localhost:5181/api/auth/login', { email, password });
+
+      const userId = response.data.userId || response.data.id;
       if (rememberMe) {
         localStorage.setItem('rememberedEmail', email);
       } else {
         localStorage.removeItem('rememberedEmail');
       }
+      console.log(userId);
+      if (userId) {
+        localStorage.setItem('userId', userId);
+        
+      }
 
-      setMessage(response.data.message);
-      setError('');
-      
+      setMessage(response.data.message || "Connexion réussie.");
+
+      // Redirection après 1.5s selon rôle
       setTimeout(() => {
         if (response.data.role === 'Professor') {
           navigate('/TeacherDashboard');
@@ -52,9 +60,9 @@ export default function LoginForm() {
           navigate('/student-dashboard');
         }
       }, 1500);
+
     } catch (err) {
-      setError(err.response?.data || "Erreur de connexion");
-      setMessage('');
+      setError(err.response?.data?.message || "Erreur de connexion");
     } finally {
       setLoading(false);
     }
