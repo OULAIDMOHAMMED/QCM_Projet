@@ -113,7 +113,6 @@ namespace exambackend.Controllers
             return Ok(qcms);
         }
         [HttpGet("all")]
-        [Authorize(Roles = "Professor")]
         public async Task<ActionResult<IEnumerable<object>>> GetAllQCMs()
         {
             try
@@ -142,5 +141,6 @@ namespace exambackend.Controllers
                 });
             }
         }
+
     }
 }

@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using exambackend.Models; // Assurez-vous d'importer vos modèles
+using exambackend.Models;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
 using exambackend.Data;
 
 namespace exambackend.Controllers
@@ -10,7 +12,7 @@ namespace exambackend.Controllers
     [Route("api/submit")]
     public class SubmitAnswersQCm : ControllerBase
     {
-        private readonly AppDbContext _context; // Remplacez par le contexte de votre base de données
+        private readonly AppDbContext _context;
 
         public SubmitAnswersQCm(AppDbContext context)
         {
@@ -25,6 +27,12 @@ namespace exambackend.Controllers
                 return BadRequest(new { Message = "Les données de réponse sont invalides." });
             }
 
+            // Vérifie que StudentId est positif (id valide)
+            if (responseDto.StudentId <= 0)
+            {
+                return BadRequest(new { Message = "L'identifiant de l'étudiant est requis et doit être positif." });
+            }
+
             var qcm = await _context.QCMs
                 .Include(q => q.Questions)
                 .FirstOrDefaultAsync(q => q.Id == responseDto.QCMId);
@@ -34,15 +42,9 @@ namespace exambackend.Controllers
                 return NotFound(new { Message = "QCM non trouvé." });
             }
 
-            if (string.IsNullOrEmpty(responseDto.StudentId))
-            {
-                return BadRequest(new { Message = "L'identifiant de l'étudiant est requis." });
-            }
-
             double totalQuestions = qcm.Questions.Count;
             double correctCount = 0;
 
-            // Fonction locale pour comparer deux listes d'entiers
             bool AreEqual(List<int> a, List<int> b)
             {
                 if (a == null && b == null) return true;
@@ -74,7 +76,8 @@ namespace exambackend.Controllers
                 QCMId = responseDto.QCMId,
                 StudentId = responseDto.StudentId,
                 SelectedAnswers = responseDto.SelectedAnswers,
-                Note = finalScore
+                Note = finalScore,
+                // Si tes propriétés de navigation sont required, pense à les initialiser ou à les rendre nullable dans ta classe Response
             };
 
             await _context.Responses.AddAsync(response);
@@ -86,9 +89,39 @@ namespace exambackend.Controllers
                 Note = finalScore
             });
         }
+        [HttpGet("results/{teacherId}")]
+        public async Task<ActionResult> GetQCMResultsForTeacher(int teacherId)
+        {
+            // Récupère tous les QCMs du prof
+            var qcmList = await _context.QCMs
+                .Where(q => q.TeacherId == teacherId)
+                .ToListAsync();
 
+            var qcmIds = qcmList.Select(q => q.Id).ToList();
 
+            // Récupère les réponses liées à ces QCMs
+            var responses = await _context.Responses
+                .Where(r => qcmIds.Contains(r.QCMId))
+                .Include(r => r.Student)
+                .ToListAsync();
 
+            // Assemble les résultats
+            var result = qcmList.Select(qcm => new
+            {
+                QCMId = qcm.Id,
+                QCMTitle = qcm.Title,
+                Responses = responses
+                    .Where(r => r.QCMId == qcm.Id)
+                    .Select(r => new
+                    {
+                        StudentId = r.StudentId,
+                        StudentName = r.Student != null ? r.Student.name: "Inconnu",
+                        Note = r.Note
+                    }).ToList()
+            });
+
+            return Ok(result);
+        }
 
     }
 }

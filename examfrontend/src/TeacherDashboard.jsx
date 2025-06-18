@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './TeacherDashboard.css';
 import CreateQCM from './qcm';
+import NotesList from './NotesList';
 import RegisteredStudents from './RegisteredStudents';
 
 
@@ -52,7 +53,7 @@ export default function TeacherDashboard() {
         {activeTab === 'grades' && (
           <section>
             <h1>Notes</h1>
-            <p>Gestion et consultation des notes...</p>
+            <NotesList /> 
             {/* Intégrer tableau de notes */}
           </section>
         )}

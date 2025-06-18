@@ -1,13 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using exambackend.Models;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
 
 public class Response
 {
     [Key]
     public int Id { get; set; }
+
     public int QCMId { get; set; }
-    public string StudentId { get; set; }
+    [ForeignKey("QCMId")]
+    public QCM? QCM { get; set; }
+
+    public int StudentId { get; set; }
+    [ForeignKey("StudentId")]
+    public  User? Student { get; set; }
 
     public string SelectedAnswersJson { get; set; } = string.Empty;
 
@@ -25,5 +32,6 @@ public class Response
             SelectedAnswersJson = JsonSerializer.Serialize(value);
         }
     }
+
     public double Note { get; set; }
 }
