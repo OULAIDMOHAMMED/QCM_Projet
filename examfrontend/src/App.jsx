@@ -1,8 +1,8 @@
 // App.jsx
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import RegisterForm from './RegisterForm';
-import LoginForm from './LoginForm';
+import RegisterForm from './Register/RegisterForm';
+import LoginForm from './Login/LoginForm';
 import CreateQCM from './qcm';
 import TeacherDashboard from './TeacherDashboard';
 import RespondQCM from './qcmetu';
