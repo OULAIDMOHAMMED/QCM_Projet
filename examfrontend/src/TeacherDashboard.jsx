@@ -46,7 +46,7 @@ export default function TeacherDashboard() {
         {activeTab === 'students' && (
           <section>
             <RegisteredStudents />
-            {/* Ici tu peux intégrer ta liste d'étudiants */}
+            {}
           </section>
         )}
 
@@ -54,7 +54,7 @@ export default function TeacherDashboard() {
           <section>
             <h1>Notes</h1>
             <NotesList /> 
-            {/* Intégrer tableau de notes */}
+            {}
           </section>
         )}
 
@@ -62,7 +62,7 @@ export default function TeacherDashboard() {
           <section>
             <h1>Statistiques</h1>
             <p>Graphiques et suivi des performances...</p>
-            {/* Intégrer tes charts ici (ex : avec recharts, chart.js, etc.) */}
+            {}
           </section>
         )}
 

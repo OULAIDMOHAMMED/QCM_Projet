@@ -34,7 +34,7 @@ export default function NotesList() {
 
   if (loading) return <p>Chargement des notes...</p>;
 
-  if (!Array.isArray(data) || data.length === 0) return <p>Aucun QCM trouvé.</p>;
+  if (!Array.isArray(data) || data.length === 0) return <p>Aucun QCM trouve.</p>;
 
   return (
     <div>

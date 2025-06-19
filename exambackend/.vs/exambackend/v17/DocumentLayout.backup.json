@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\controllers\\qcmcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\controllers\\qcmcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -59,6 +63,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Response.cs",
+              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\Response.cs",
+              "RelativeDocumentMoniker": "exambackend\\Models\\Response.cs",
+              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\Response.cs",
+              "RelativeToolTip": "exambackend\\Models\\Response.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T13:12:23.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "QCMController.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\QCMController.cs",
               "RelativeDocumentMoniker": "exambackend\\Controllers\\QCMController.cs",
@@ -71,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "exambackend\\Controllers\\AuthController.cs",
@@ -83,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "exambackend\\Data\\AppDbContext.cs",
@@ -95,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "QCM.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\QCM.cs",
               "RelativeDocumentMoniker": "exambackend\\Models\\QCM.cs",
@@ -107,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Program.cs",
               "RelativeDocumentMoniker": "exambackend\\Program.cs",
@@ -119,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\User.cs",
               "RelativeDocumentMoniker": "exambackend\\Models\\User.cs",
@@ -131,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Question.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\Question.cs",
               "RelativeDocumentMoniker": "exambackend\\Models\\Question.cs",
@@ -143,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\appsettings.json",
               "RelativeDocumentMoniker": "exambackend\\appsettings.json",
@@ -155,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\RegisterDto.cs",
               "RelativeDocumentMoniker": "exambackend\\Models\\RegisterDto.cs",
@@ -167,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\LoginDto.cs",
               "RelativeDocumentMoniker": "exambackend\\Models\\LoginDto.cs",
@@ -179,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "exambackend\\Properties\\launchSettings.json",
