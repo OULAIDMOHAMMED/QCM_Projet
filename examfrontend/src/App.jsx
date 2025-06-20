@@ -3,12 +3,12 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RegisterForm from './Register/RegisterForm';
 import LoginForm from './Login/LoginForm';
-import CreateQCM from './qcm';
-import TeacherDashboard from './TeacherDashboard';
-import RespondQCM from './qcmetu';
-import QCMList from './QCMList';
-import RegisteredStudents from './RegisteredStudents';
-import NotesList from './NotesList';
+import CreateQCM from './professeur/qcm';
+import TeacherDashboard from './professeur/TeacherDashboard';
+import RespondQCM from './etudiant/qcmetu';
+import QCMList from './etudiant/QCMList';
+import RegisteredStudents from './professeur/RegisteredStudents';
+import NotesList from './professeur/NotesList';
 
 
 export default function App() {
