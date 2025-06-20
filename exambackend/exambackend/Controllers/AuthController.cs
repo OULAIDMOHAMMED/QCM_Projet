@@ -88,7 +88,7 @@ namespace exambackend.Controllers
             var authProperties = new AuthenticationProperties
             {
                 IsPersistent = false, // Ne pas garder après fermeture du navigateur
-                ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(2), // Expiration absolue
+                ExpiresUtc = DateTimeOffset.UtcNow.AddHours(1), // Expiration absolue
                 AllowRefresh = false // Empêche le rafraîchissement du cookie
             };
 
