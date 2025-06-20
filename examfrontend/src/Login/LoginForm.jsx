@@ -57,7 +57,7 @@ export default function LoginForm() {
         if (response.data.role === 'Professor') {
           navigate('/TeacherDashboard');
         } else {
-          navigate('/student-dashboard');
+          navigate('/StudentDashboard');
         }
       }, 1500);
 

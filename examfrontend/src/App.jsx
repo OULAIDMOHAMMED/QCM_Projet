@@ -9,6 +9,7 @@ import RespondQCM from './etudiant/qcmetu';
 import QCMList from './etudiant/QCMList';
 import RegisteredStudents from './professeur/RegisteredStudents';
 import NotesList from './professeur/NotesList';
+import StudentDashboard from './etudiant/StudentDashboard';
 
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/qcm" element={<CreateQCM />} />
         <Route path="/TeacherDashboard" element={<TeacherDashboard />} />
+        <Route path="/StudentDashboard" element={<StudentDashboard />} />
         <Route path="/RS/:qcmId" element={<RespondQCM />} />
         <Route path="/qcmm" element={<QCMList />} />
         <Route path="/inscri" element={<RegisteredStudents />} />
