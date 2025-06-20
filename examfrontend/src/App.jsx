@@ -10,6 +10,7 @@ import QCMList from './etudiant/QCMList';
 import RegisteredStudents from './professeur/RegisteredStudents';
 import NotesList from './professeur/NotesList';
 import StudentDashboard from './etudiant/StudentDashboard';
+import StudentHistoryList from './etudiant/StudentHistoryList';
 
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/qcmm" element={<QCMList />} />
         <Route path="/inscri" element={<RegisteredStudents />} />
         <Route path="/note" element={<NotesList /> } />
+        <Route path="/hist" element={<StudentHistoryList /> } />
       </Routes>
     </BrowserRouter>
   );

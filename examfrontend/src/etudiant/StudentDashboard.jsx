@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './StudentDashboard.css'; // même style que TeacherDashboard.css
 import QCMList from './QCMList'; // pour afficher les QCM disponibles depuis l'API
+import StudentHistoryList from './StudentHistoryList';
 
 export default function StudentDashboard() {
   const [activeTab, setActiveTab] = useState('qcm');
@@ -44,6 +45,7 @@ export default function StudentDashboard() {
         {activeTab === 'results' && (
           <section>
             <h1>Mes Résultats</h1>
+            <StudentHistoryList />
           </section>
         )}
 

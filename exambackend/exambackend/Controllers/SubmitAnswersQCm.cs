@@ -122,6 +122,26 @@ namespace exambackend.Controllers
 
             return Ok(result);
         }
+        [HttpGet("passed/{studentId}")]
+        public async Task<IActionResult> GetPassedQCMs(int studentId)
+        {
+            var passedQCMs = await _context.Responses
+                .Where(s => s.StudentId == studentId)
+                .Select(s => s.QCMId)
+                .Distinct()
+                .ToListAsync();
+
+            var qcms = await _context.QCMs
+                .Where(q => passedQCMs.Contains(q.Id))
+                .Select(q => new {
+                    q.Id,
+                    q.Title
+                })
+                .ToListAsync();
+
+            return Ok(qcms);
+        }
+
 
     }
 }
