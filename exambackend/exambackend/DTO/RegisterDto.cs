@@ -1,4 +1,4 @@
-﻿namespace exambackend.Models
+﻿namespace exambackend.DTO
 {
     public class RegisterDto
     {
