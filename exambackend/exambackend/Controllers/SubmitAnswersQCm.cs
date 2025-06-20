@@ -142,6 +142,37 @@ namespace exambackend.Controllers
             return Ok(qcms);
         }
 
+        [HttpGet("history/{studentId}/{qcmId}")]
+        public async Task<IActionResult> GetStudentQcmHistory(int studentId, int qcmId)
+        {
+            var response = await _context.Responses
+                .FirstOrDefaultAsync(r => r.StudentId == studentId && r.QCMId == qcmId);
+
+            if (response == null)
+                return NotFound(new { Message = "Aucune réponse trouvée pour cet étudiant et ce QCM." });
+
+            var qcm = await _context.QCMs
+                .Include(q => q.Questions)
+                .FirstOrDefaultAsync(q => q.Id == qcmId);
+
+            if (qcm == null)
+                return NotFound(new { Message = "QCM introuvable." });
+
+            var questions = qcm.Questions.Select((q, index) => new
+            {
+                text = q.QuestionText,
+                answers = q.Answers,
+                correctIndexes = q.CorrectIndexes ?? new List<int>(),
+                selectedIndexes = (index < response.SelectedAnswers.Count) ? response.SelectedAnswers[index] : new List<int>()
+            }).ToList();
+
+            return Ok(new
+            {
+                title = qcm.Title,
+                note = response.Note,
+                questions = questions
+            });
+        }
 
     }
 }
