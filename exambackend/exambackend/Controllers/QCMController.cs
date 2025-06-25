@@ -9,7 +9,7 @@ namespace exambackend.Controllers
 {
     [Route("api/qcm")]
     [ApiController]
-    [Authorize] // Protection globale du contrôleur
+    [Authorize] 
     public class QCMController : ControllerBase
     {
         private readonly AppDbContext _context;
@@ -22,38 +22,38 @@ namespace exambackend.Controllers
         [HttpPost("create")]
         public async Task<ActionResult<QCM>> CreateQCM([FromBody] QCM qcm)
         {
-            // Vérification plus robuste de l'authentification
+            
             if (User.Identity?.IsAuthenticated != true)
             {
                 return Unauthorized(new { Message = "Authentification requise" });
             }
 
-            // Gestion sécurisée de l'ID utilisateur
+            
             if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out int userId) || userId <= 0)
             {
                 return BadRequest(new { Message = "Identifiant utilisateur invalide" });
             }
 
-            // Récupération de l'utilisateur avec vérification
+            
             var user = await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Id == userId);
             if (user == null)
             {
                 return NotFound(new { Message = "Utilisateur non trouvé" });
             }
 
-            // Vérification du rôle
+            
             if (user.Role != "Professor")
             {
                 return StatusCode(403, new { Message = "Seuls les enseignants peuvent créer des QCM" });
             }
 
-            // Validation du QCM
+            
             if (qcm == null || string.IsNullOrWhiteSpace(qcm.Title))
             {
                 return BadRequest(new { Message = "Les données du QCM sont invalides" });
             }
 
-            // Création sécurisée du QCM
+            
             var newQcm = new QCM
             {
                 Title = qcm.Title,
@@ -125,7 +125,7 @@ namespace exambackend.Controllers
                         q.Title,
                         TeacherId = q.TeacherId,
                         QuestionsCount = q.Questions.Count,
-                        CreationDate = q.CreationDate // Assurez-vous d'avoir ce champ dans votre modèle
+                        CreationDate = q.CreationDate 
                     })
                     .OrderByDescending(q => q.CreationDate)
                     .ToListAsync();

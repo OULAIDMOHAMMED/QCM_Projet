@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-// Configure axios une fois au niveau de l'application (à mettre dans index.js)
+
 axios.defaults.withCredentials = true;
 
 export default function CreateQCM() {
@@ -60,7 +60,6 @@ export default function CreateQCM() {
         throw new Error('Ajoutez au moins une question valide');
       }
 
-      // Préparation des données
       const qcmData = {
         Title: title,
         Questions: questions
@@ -72,7 +71,6 @@ export default function CreateQCM() {
           }))
       };
 
-      // Envoi au backend
       const response = await axios.post(
         'http://localhost:5181/api/qcm/create', 
         qcmData,
@@ -83,7 +81,7 @@ export default function CreateQCM() {
         }
       );
 
-      // Réinitialisation après succès
+      
       setTitle('');
       setQuestions([{ question: '', answers: ['', '', '', ''], correctIndexes: [] }]);
       setSuccess(response.data.message || 'QCM créé avec succès!');
@@ -92,16 +90,13 @@ export default function CreateQCM() {
       let errorMessage = "Erreur lors de la création du QCM";
       
       if (error.response) {
-        // Erreur 4xx/5xx du serveur
         errorMessage = error.response.data.message || errorMessage;
       } else if (error.request) {
-        // Pas de réponse du serveur (Network Error)
         errorMessage = "Impossible de se connecter au serveur. Vérifiez:";
         errorMessage += "\n1. Que le backend est en cours d'exécution";
         errorMessage += "\n2. Que l'URL est correcte (http://localhost:5181)";
         errorMessage += "\n3. Votre connexion internet";
       } else {
-        // Erreur de configuration
         errorMessage = error.message || errorMessage;
       }
 
@@ -116,7 +111,7 @@ export default function CreateQCM() {
     <div className="container" style={{ padding: 20 }}>
       <h1 style={{ color: '#58a6ff', textAlign: 'center' }}>Créer un QCM</h1>
       
-      {/* Message d'erreur */}
+      {}
       {error && (
         <div style={{ 
           color: '#ff6b6b',
@@ -131,7 +126,7 @@ export default function CreateQCM() {
         </div>
       )}
       
-      {/* Message de succès */}
+      {}
       {success && (
         <div style={{ 
           color: '#3fb950',

@@ -3,6 +3,50 @@
   "WorkspaceRootPath": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\dto\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\dto\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\qcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\qcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\dto\\responsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\dto\\responsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\controllers\\submitanswersqcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\controllers\\submitanswersqcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,52 +55,20 @@
       "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\controllers\\qcmcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\qcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\qcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\responsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\responsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\migrations\\20250613144240_addcreationdatetoqcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\migrations\\20250613144240_addcreationdatetoqcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\models\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\models\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\migrations\\20250613144240_addcreationdatetoqcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|solutionrelative:exambackend\\migrations\\20250613144240_addcreationdatetoqcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CAADF25-BC80-4C21-B54B-9ECA4471806D}|exambackend\\exambackend.csproj|c:\\users\\oulaid\\desktop\\exam_projet\\exambackend\\exambackend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -75,14 +87,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SubmitAnswersQCm.cs",
-              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\SubmitAnswersQCm.cs",
-              "RelativeDocumentMoniker": "exambackend\\Controllers\\SubmitAnswersQCm.cs",
-              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\SubmitAnswersQCm.cs",
-              "RelativeToolTip": "exambackend\\Controllers\\SubmitAnswersQCm.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAmwH0AAAAFAAAAAAAAAA==",
+              "Title": "UpdateUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\DTO\\UpdateUserDto.cs",
+              "RelativeDocumentMoniker": "exambackend\\DTO\\UpdateUserDto.cs",
+              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\DTO\\UpdateUserDto.cs",
+              "RelativeToolTip": "exambackend\\DTO\\UpdateUserDto.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwAUAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T13:57:02.209Z",
+              "WhenOpened": "2025-06-23T18:12:38.139Z",
               "EditorCaption": ""
             },
             {
@@ -93,113 +105,100 @@
               "RelativeDocumentMoniker": "exambackend\\Models\\QCM.cs",
               "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\QCM.cs",
               "RelativeToolTip": "exambackend\\Models\\QCM.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T12:38:59.074Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Question.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\Question.cs",
               "RelativeDocumentMoniker": "exambackend\\Models\\Question.cs",
               "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\Question.cs",
               "RelativeToolTip": "exambackend\\Models\\Question.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAA3wA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwAQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T12:45:05.818Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Response.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\Response.cs",
               "RelativeDocumentMoniker": "exambackend\\Models\\Response.cs",
               "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\Response.cs",
               "RelativeToolTip": "exambackend\\Models\\Response.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAswCUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-17T13:12:23.238Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "QCMController.cs",
-              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\QCMController.cs",
-              "RelativeDocumentMoniker": "exambackend\\Controllers\\QCMController.cs",
-              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\QCMController.cs",
-              "RelativeToolTip": "exambackend\\Controllers\\QCMController.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAowHIAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T12:48:10.205Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\ResponseDto.cs",
-              "RelativeDocumentMoniker": "exambackend\\Models\\ResponseDto.cs",
-              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\ResponseDto.cs",
-              "RelativeToolTip": "exambackend\\Models\\ResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T20:32:45.353Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\User.cs",
               "RelativeDocumentMoniker": "exambackend\\Models\\User.cs",
               "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\User.cs",
               "RelativeToolTip": "exambackend\\Models\\User.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAwAQAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-08T11:44:03.285Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "exambackend\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\AuthController.cs",
               "RelativeToolTip": "exambackend\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAA5wAEAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAowJcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-08T11:53:08.167Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\LoginDto.cs",
-              "RelativeDocumentMoniker": "exambackend\\Models\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\LoginDto.cs",
-              "RelativeToolTip": "exambackend\\Models\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "exambackend\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "exambackend\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T11:44:50.482Z",
+              "WhenOpened": "2025-06-23T17:14:05.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\DTO\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "exambackend\\DTO\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\DTO\\RegisterDto.cs",
+              "RelativeToolTip": "exambackend\\DTO\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T11:45:21.312Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Program.cs",
-              "RelativeDocumentMoniker": "exambackend\\Program.cs",
-              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Program.cs",
-              "RelativeToolTip": "exambackend\\Program.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAcwCEAAAA4AAAAAAAAAA==",
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\DTO\\LoginDto.cs",
+              "RelativeDocumentMoniker": "exambackend\\DTO\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\DTO\\LoginDto.cs",
+              "RelativeToolTip": "exambackend\\DTO\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T11:56:18.707Z",
+              "WhenOpened": "2025-06-08T11:44:50.482Z",
               "EditorCaption": ""
             },
             {
@@ -210,7 +209,7 @@
               "RelativeDocumentMoniker": "exambackend\\Data\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Data\\AppDbContext.cs",
               "RelativeToolTip": "exambackend\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAmwAwAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-08T11:46:14.384Z",
               "EditorCaption": ""
@@ -218,19 +217,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "20250613144240_AddCreationDateToQCM.cs",
-              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Migrations\\20250613144240_AddCreationDateToQCM.cs",
-              "RelativeDocumentMoniker": "exambackend\\Migrations\\20250613144240_AddCreationDateToQCM.cs",
-              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Migrations\\20250613144240_AddCreationDateToQCM.cs",
-              "RelativeToolTip": "exambackend\\Migrations\\20250613144240_AddCreationDateToQCM.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Title": "SubmitAnswersQCm.cs",
+              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\SubmitAnswersQCm.cs",
+              "RelativeDocumentMoniker": "exambackend\\Controllers\\SubmitAnswersQCm.cs",
+              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\SubmitAnswersQCm.cs",
+              "RelativeToolTip": "exambackend\\Controllers\\SubmitAnswersQCm.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAQwGoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T13:58:55.167Z",
+              "WhenOpened": "2025-06-17T13:57:02.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\DTO\\ResponseDto.cs",
+              "RelativeDocumentMoniker": "exambackend\\DTO\\ResponseDto.cs",
+              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\DTO\\ResponseDto.cs",
+              "RelativeToolTip": "exambackend\\DTO\\ResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA+wAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T20:32:45.353Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "QCMController.cs",
+              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\QCMController.cs",
+              "RelativeDocumentMoniker": "exambackend\\Controllers\\QCMController.cs",
+              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\QCMController.cs",
+              "RelativeToolTip": "exambackend\\Controllers\\QCMController.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAowH8AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T12:48:10.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "exambackend\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "exambackend\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T12:55:14.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\appsettings.json",
               "RelativeDocumentMoniker": "exambackend\\appsettings.json",
@@ -242,19 +280,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "RegisterDto.cs",
-              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\RegisterDto.cs",
-              "RelativeDocumentMoniker": "exambackend\\Models\\RegisterDto.cs",
-              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Models\\RegisterDto.cs",
-              "RelativeToolTip": "exambackend\\Models\\RegisterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAxAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Program.cs",
+              "RelativeDocumentMoniker": "exambackend\\Program.cs",
+              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Program.cs",
+              "RelativeToolTip": "exambackend\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACEAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T11:45:21.312Z"
+              "WhenOpened": "2025-06-08T11:56:18.707Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
+              "Title": "20250613144240_AddCreationDateToQCM.cs",
+              "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Migrations\\20250613144240_AddCreationDateToQCM.cs",
+              "RelativeDocumentMoniker": "exambackend\\Migrations\\20250613144240_AddCreationDateToQCM.cs",
+              "ToolTip": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Migrations\\20250613144240_AddCreationDateToQCM.cs",
+              "RelativeToolTip": "exambackend\\Migrations\\20250613144240_AddCreationDateToQCM.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T13:58:55.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\OULAID\\Desktop\\exam_projet\\exambackend\\exambackend\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "exambackend\\Properties\\launchSettings.json",

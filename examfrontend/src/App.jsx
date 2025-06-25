@@ -11,6 +11,10 @@ import RegisteredStudents from './professeur/RegisteredStudents';
 import NotesList from './professeur/NotesList';
 import StudentDashboard from './etudiant/StudentDashboard';
 import StudentHistoryList from './etudiant/StudentHistoryList';
+import StudentQCMHistory from './etudiant/StudentQcmResult';
+import EditProfileForm from './etudiant/EditProfileForm';
+import QCMStats from './professeur/QCMStats';
+
 
 
 export default function App() {
@@ -28,6 +32,9 @@ export default function App() {
         <Route path="/inscri" element={<RegisteredStudents />} />
         <Route path="/note" element={<NotesList /> } />
         <Route path="/hist" element={<StudentHistoryList /> } />
+        <Route path="/history/:qcmId" element={<StudentQCMHistory />}/>
+        <Route path="/profil" element={<EditProfileForm />}/>
+        <Route path="/statu" element={<QCMStats />}/>
       </Routes>
     </BrowserRouter>
   );

@@ -58,21 +58,21 @@ export default function RegisterForm() {
 
       <div className="register-container">
         <div className="left">
-          <h1>⚡ ExamQCM Platform</h1>
+          <h1> ExamQCM Platform</h1>
           <div className="feature">
-            <h3>📝 Création d'examens simplifiée</h3>
+            <h3> Création d'examens simplifiée</h3>
             <p>Les enseignants peuvent créer facilement des QCM avec différents types de questions.</p>
           </div>
           <div className="feature">
-            <h3>⏱️ Examens chronométrés</h3>
+            <h3> Examens chronométrés</h3>
             <p>Configuration flexible du temps alloué pour chaque examen.</p>
           </div>
           <div className="feature">
-            <h3>✅ Correction automatique</h3>
+            <h3> Correction automatique</h3>
             <p>Résultats instantanés avec correction automatique et calcul des notes.</p>
           </div>
           <div className="feature">
-            <h3>📊 Suivi des performances</h3>
+            <h3> Suivi des performances</h3>
             <p>Historique complet des examens passés avec statistiques détaillées.</p>
           </div>
         </div>

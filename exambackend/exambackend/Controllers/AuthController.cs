@@ -101,8 +101,9 @@ namespace exambackend.Controllers
             {
                 message = "Connexion réussie",
                 role = user.Role,
+                nameuser=user.name,
                 id = user.Id,
-                expires = authProperties.ExpiresUtc?.ToString("o") // Date d'expiration ISO
+                expires = authProperties.ExpiresUtc?.ToString("o")
             });
         }
         [HttpGet("students")]
@@ -119,6 +120,37 @@ namespace exambackend.Controllers
 
             return Ok(students);
         }
+
+        [HttpPut("update/{id}")]
+        public async Task<IActionResult> UpdateUser(int id, [FromBody] UpdateUserDto dto)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
+                return NotFound(new { message = "Utilisateur non trouvé" });
+
+            // Mise à jour des champs
+            if (!string.IsNullOrWhiteSpace(dto.name))
+                user.name = dto.name.Trim();
+
+            if (!string.IsNullOrWhiteSpace(dto.Email))
+                user.Email = dto.Email.Trim();
+
+            if (!string.IsNullOrWhiteSpace(dto.Password))
+                user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password);
+
+            try
+            {
+                await _context.SaveChangesAsync();
+                return Ok(new { message = "Utilisateur mis à jour avec succès" });
+            }
+            catch (DbUpdateException ex)
+            {
+                return StatusCode(500, new { message = "Erreur lors de la mise à jour", detail = ex.InnerException?.Message });
+            }
+        }
+
+
+
 
         [HttpPost("logout")]
         public async Task<IActionResult> Logout()

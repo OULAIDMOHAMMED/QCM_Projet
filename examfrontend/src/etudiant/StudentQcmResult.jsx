@@ -11,7 +11,7 @@ export default function StudentQcmResult() {
   useEffect(() => {
     const fetchResult = async () => {
       try {
-        const response = await axios.get(`http://localhost:5181/api/qcm/history/${studentId}/${qcmId}`);
+        const response = await axios.get(`http://localhost:5181/api/submit/history/${studentId}/${qcmId}`);
         setQcmData(response.data);
       } catch (err) {
         setError("Erreur lors de la récupération des détails du QCM.");
@@ -55,11 +55,11 @@ export default function StudentQcmResult() {
                     borderRadius: 6,
                     backgroundColor:
                       isSelected && isCorrect
-                        ? "#2e7d32" // ✅ choisi et correct
+                        ? "#2e7d32" 
                         : isSelected && !isCorrect
-                          ? "#c62828" // ❌ choisi mais faux
+                          ? "#c62828" 
                           : !isSelected && isCorrect
-                            ? "#1565c0" // ✅ non choisi mais bonne réponse
+                            ? "#1565c0" 
                             : "#21262d",
                     color: "#ffffff",
                     fontWeight: isCorrect ? "bold" : "normal",

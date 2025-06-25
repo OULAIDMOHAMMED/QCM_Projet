@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './NotesList.css'; // Fichier CSS séparé
 
 export default function NotesList() {
   const [data, setData] = useState([]);
@@ -7,16 +8,13 @@ export default function NotesList() {
 
   useEffect(() => {
     const teacherId = localStorage.getItem('userId');
-    console.log('Fetching results for teacherId:', teacherId);
     if (!teacherId) {
-      console.error("Aucun ID d'utilisateur trouvé dans localStorage.");
       setLoading(false);
       return;
     }
 
     axios.get(`http://localhost:5181/api/submit/results/${teacherId}`)
       .then(res => {
-        console.log('Données reçues:', res.data);
         if (Array.isArray(res.data)) {
           setData(res.data);
         } else if (res.data) {
@@ -25,23 +23,20 @@ export default function NotesList() {
           setData([]);
         }
       })
-      .catch(err => {
-        console.error(err);
-        setData([]);
-      })
+      .catch(() => setData([]))
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p>Chargement des notes...</p>;
+  if (loading) return <p className="loading">Chargement des notes...</p>;
 
-  if (!Array.isArray(data) || data.length === 0) return <p>Aucun QCM trouve.</p>;
+  if (!Array.isArray(data) || data.length === 0) return <p className="empty">Aucun QCM trouvé.</p>;
 
   return (
-    <div>
-      <h2>Résultats des QCM</h2>
+    <div className="notes-list-container">
+      <h2 className="title">Résultats des QCM</h2>
       {data.map((qcm, index) => (
         <div key={qcm.qcmId ?? index} className="qcm-section">
-          <h3>{qcm.qcmTitle}</h3>
+          <h3 className="qcm-title">{qcm.qcmTitle}</h3>
           <table className="notes-table">
             <thead>
               <tr>
@@ -58,8 +53,8 @@ export default function NotesList() {
                   </tr>
                 ))
               ) : (
-                <tr key="no-responses">
-                  <td colSpan="2" style={{ textAlign: 'center' }}>Aucune réponse pour ce QCM</td>
+                <tr>
+                  <td colSpan="2" className="no-responses">Aucune réponse pour ce QCM</td>
                 </tr>
               )}
             </tbody>

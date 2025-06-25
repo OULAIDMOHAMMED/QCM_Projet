@@ -27,7 +27,7 @@ namespace exambackend.Controllers
                 return BadRequest(new { Message = "Les données de réponse sont invalides." });
             }
 
-            // Vérifie que StudentId est positif (id valide)
+            
             if (responseDto.StudentId <= 0)
             {
                 return BadRequest(new { Message = "L'identifiant de l'étudiant est requis et doit être positif." });
@@ -77,7 +77,7 @@ namespace exambackend.Controllers
                 StudentId = responseDto.StudentId,
                 SelectedAnswers = responseDto.SelectedAnswers,
                 Note = finalScore,
-                // Si tes propriétés de navigation sont required, pense à les initialiser ou à les rendre nullable dans ta classe Response
+                
             };
 
             await _context.Responses.AddAsync(response);
@@ -92,20 +92,19 @@ namespace exambackend.Controllers
         [HttpGet("results/{teacherId}")]
         public async Task<ActionResult> GetQCMResultsForTeacher(int teacherId)
         {
-            // Récupère tous les QCMs du prof
+           
             var qcmList = await _context.QCMs
                 .Where(q => q.TeacherId == teacherId)
                 .ToListAsync();
 
             var qcmIds = qcmList.Select(q => q.Id).ToList();
 
-            // Récupère les réponses liées à ces QCMs
             var responses = await _context.Responses
                 .Where(r => qcmIds.Contains(r.QCMId))
                 .Include(r => r.Student)
                 .ToListAsync();
 
-            // Assemble les résultats
+            
             var result = qcmList.Select(qcm => new
             {
                 QCMId = qcm.Id,

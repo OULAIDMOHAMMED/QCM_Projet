@@ -1,4 +1,4 @@
-/* LoginForm.css */
+
 .login-page {
     display: flex;
     justify-content: center;
@@ -132,7 +132,6 @@
     text-decoration: underline;
 }
 
-/* Alertes et animations */
 .alert {
     position: fixed;
     top: 20px;

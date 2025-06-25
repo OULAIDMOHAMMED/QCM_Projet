@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './RegisteredStudents.css'; // Tu peux personnaliser le style
+import './RegisteredStudents.css'; 
 
 export default function RegisteredStudents() {
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Appel API pour récupérer les étudiants
     const fetchStudents = async () => {
       try {
         const response = await axios.get('http://localhost:5181/api/auth/students');

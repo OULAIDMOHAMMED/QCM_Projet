@@ -75,4 +75,47 @@
     font-size: 1.1rem;
     color: #c9d1d9;
   }
+  .sidebar-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #58a6ff;
+    margin-bottom: 10px;
+  }
+  
+  .user-name {
+    color: #c9d1d9;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #30363d;
+  }
+  
+  .logout-button {
+    width: 100%;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #e63946;
+  }
   
