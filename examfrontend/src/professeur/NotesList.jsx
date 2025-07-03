@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './NotesList.css'; // Fichier CSS séparé
+import './NotesList.css'; 
 
 export default function NotesList() {
   const [data, setData] = useState([]);
